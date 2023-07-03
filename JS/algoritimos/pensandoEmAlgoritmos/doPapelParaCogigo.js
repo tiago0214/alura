@@ -9,3 +9,4 @@ for (let atual = 0; atual < precos.length ; atual++){
 }
 //ele vai passar por todo o meu array primeiro, para depois ir para o console.
 console.log(maisBarato)
+//testar
