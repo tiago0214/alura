@@ -1,11 +1,15 @@
 const livros = require("./listaLivros")
 
-let maisBarato = 0;
 
-for (let atual = 0; atual < livros.length ; atual++){
-    if(livros[atual].valor < livros[maisBarato].valor){
-        maisBarato= livros[atual]
+function menorValor (lista,posicaoInicial){
+let maisBarato = posicaoInicial;
+for (let atual = posicaoInicial; atual < lista.length ; atual++){
+    if(lista[atual].valor < lista[maisBarato].valor){
+        maisBarato = atual
     }
 }
+return maisBarato
+}
+module.exports = menorValor;
+
 //ele vai passar por todo o meu array primeiro, para depois ir para o console.
-console.log(maisBarato)
