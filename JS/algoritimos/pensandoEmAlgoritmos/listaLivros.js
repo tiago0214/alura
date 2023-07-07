@@ -9,11 +9,19 @@ const precos = [
     },
     {
         titulo: 'go',
-        valor: 35
+        valor: 20
     },
     {
         titulo:'Ruby',
         valor:60
+    },
+    {
+        titulo:'DT',
+        valor:5
+    },
+    {
+        titulo:'DPC',
+        valor:12.5
     }
     ]
 
