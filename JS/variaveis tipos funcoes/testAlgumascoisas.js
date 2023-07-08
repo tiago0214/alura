@@ -6,3 +6,5 @@ if (num > 10 || !num) {
 
 // formas de pegar a negação ou seja, caso o valor não seja definido... !num
 
+//a variable inside a block that is defined by assignment alone becomes a global, automatically.
+
