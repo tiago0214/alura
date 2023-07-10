@@ -1,34 +1,35 @@
-const {edGalho,edFolha} = require("./arrays")
+const listaLivros = require("./array")
 
-function juntarLista (lista1, lista2) {
-    const listaFinal = [];
-    let posicaoAtualLista1 = 0;
-    let posicaoAtualLista2 = 0;
-    let atual = 0;
-    while (posicaoAtualLista1 < lista1.length && posicaoAtualLista2 < lista2.length) {
-        let item1 = lista1[posicaoAtualLista1]
-        let item2 = lista2[posicaoAtualLista2]
-        if(item1.valor < item2.valor){
-            listaFinal[atual] = item1
-            posicaoAtualLista1++
-        }
-        else {
-            listaFinal[atual] = item2
-            posicaoAtualLista2++
-        }
-        atual++
+function mergeSort (array) {
+
+    if(array.length > 1){ //sempre lembrar que o numero de length é diferente do numero de indices, porque length é relacionado aos elementos do meu array.
+        const meio = Math.floor(array.length / 2)
+        const parte1 = mergeSort(array.slice(0,meio))//acho que ela fica chamando chamando , até pular para a linha 8 :é os valores todos salvos na variavel parte2
+        const parte2 = mergeSort(array.slice(meio,array.length)) //ela fica chamando, é os valores todos salvos na variavel parte2
+        array = ordena(parte1,parte2);
     }
-    while(posicaoAtualLista1 < lista1.length){
-        listaFinal[atual] = lista1[posicaoAtualLista1]
-        posicaoAtualLista1++
-        atual++
-    }
-    while(posicaoAtualLista2 < lista1.length){
-        listaFinal[atual] = lista2[posicaoAtualLista2]
-        posicaoAtualLista2++
-        atual++
-    }
-    return listaFinal
+    return array
 }
-console.log(juntarLista(edFolha,edGalho))
-//eu preciso criar as variaveis item1 e item2: para que elas guardem as informações do meu array por completo , não somente o indice de cada item, porque se não , eu não consigo comparar os precos que estão estão salvos dentro da propriedade VALOR dentro de cada objeto.
+console.log(mergeSort(listaLivros))
+
+
+function ordena (lista1,lista2) { //essa função faz a ordenção entre dois elementos.
+    let posicaoAtualParte1 = 0 ;
+    let posicaoAtualParte2 = 0 ;
+    let listaFinal = [];
+
+    while(posicaoAtualParte1 < lista1.length && posicaoAtualParte2 < lista2.length) {
+        let item1 = lista1[posicaoAtualParte1]
+        let item2 = lista2[posicaoAtualParte2]
+        if(item1.valor < item2.valor){
+            listaFinal.push(item1)
+            posicaoAtualParte1++
+        }else{
+            listaFinal.push(item2)
+            posicaoAtualParte2++
+        }
+    }
+    return listaFinal.concat(posicaoAtualParte1 < lista1.length 
+        ?lista1.slice(posicaoAtualParte1) //quando eu passo somente um parametro para o metodo slice, ele pega tudo até o final do meu array.
+        :lista2.slice(posicaoAtualParte2))
+}
