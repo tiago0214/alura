@@ -1,7 +1,7 @@
 const livros = [
     {
-        titulo:'PHP',
-        valor: 15
+        titulo:'Ruby',
+        valor: 28
     },
     {
         titulo:'JavaScript',
@@ -28,8 +28,8 @@ const livros = [
         valor: 22
     },
     {
-        titulo:'Ruby',
-        valor: 28
+        titulo:'PHP',
+        valor: 15
     },
     {
         titulo:'C#',

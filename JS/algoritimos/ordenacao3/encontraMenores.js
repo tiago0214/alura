@@ -9,7 +9,7 @@ function retornarMenor (pivo, lista) {
             menores ++
         }
     }
-    trocarDeLugar(lista, lista.indexOf(pivo), menores)
+   trocarDeLugar(lista, lista.indexOf(pivo), menores)
 
     return lista
 }
@@ -22,4 +22,22 @@ function trocarDeLugar (lista , de , para) {
     lista[para] = elem1
 }
 
-console.log(retornarMenor(livros[2],livros))
+
+function divideNoPivo (array) {
+    let pivo = array[Math.floor(array.length / 2)]
+    retornarMenor(pivo,array)
+    let controle = 0;
+
+    for(analisando = 0 ; analisando < array.length ; analisando++){
+        let elementoArray = array[analisando]
+        if(elementoArray.valor < pivo.valor && elementoArray !== pivo){
+            trocarDeLugar(array , analisando , controle) 
+            controle++
+        }
+
+    }
+    return array
+}
+module.exports = trocarDeLugar
+
+console.log(divideNoPivo(livros))
