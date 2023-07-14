@@ -40,4 +40,4 @@ function divideNoPivo (array) {
 }
 module.exports = trocarDeLugar
 
-console.log(divideNoPivo(livros))
+//console.log(divideNoPivo(livros))
