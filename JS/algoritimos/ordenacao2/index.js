@@ -6,7 +6,7 @@ function mergeSort (array) {
         const meio = Math.floor(array.length / 2)
         const parte1 = mergeSort(array.slice(0,meio))//acho que ela fica chamando chamando , até pular para a linha 8 :é os valores todos salvos na variavel parte2
         const parte2 = mergeSort(array.slice(meio,array.length)) //ela fica chamando, é os valores todos salvos na variavel parte2
-        array = ordena(parte1,parte2);
+        array = ordena(parte1,parte2);  
     }
     return array
 }
@@ -26,10 +26,10 @@ function ordena (lista1,lista2) { //essa função faz a ordenção entre dois el
             posicaoAtualParte1++
         }else{
             listaFinal.push(item2)
-            posicaoAtualParte2++
+            posicaoAtualParte2++ 
         }
     }
-    return listaFinal.concat(posicaoAtualParte1 < lista1.length 
+    return listaFinal.concat(posicaoAtualParte1 < lista1.length //eu preciso do concat, porque se não, eu vou dar retorno somente uma vez, e ignorar o resto, toda vez
         ?lista1.slice(posicaoAtualParte1) //quando eu passo somente um parametro para o metodo slice, ele pega tudo até o final do meu array.
         :lista2.slice(posicaoAtualParte2))
 }

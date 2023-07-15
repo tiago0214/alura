@@ -2,7 +2,7 @@ const livros = require("./array")
 const trocarDeLugar = require("./encontraMenores")
 
 function quickSort (array, esquerda, direita) {
-    if (array.length > 1){
+    if (array.length > 1){//condição de parada para a recursão
         let indiceAtual = particiona (array, esquerda, direita);
         if( esquerda < indiceAtual -1) {
             quickSort(array, esquerda, indiceAtual - 1)
@@ -22,7 +22,7 @@ function particiona (array, esquerda, direta) {
     let atualEsquerda = esquerda;
     let atualDireita = direta; 
 
-    while(atualEsquerda <= atualDireita) {
+    while(atualEsquerda <= atualDireita) {//para de executar ,quando esquerda e direita forem iguais.
         while(array[atualEsquerda].valor < pivo.valor){
             atualEsquerda++
         }
