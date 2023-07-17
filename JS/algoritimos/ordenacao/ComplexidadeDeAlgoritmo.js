@@ -10,7 +10,7 @@
 
 //algoritmo constante: ele vai ser sempre uma operação, independete do tamanho da minha lista. Sempre vai ser a mesma coisa.
 //algoritmo com crescimento: linear ou quadratico: ele vai realizar varios tipos de operações , dependendo do tamanho da entrada de valores.
-//acredito que o quadratico, é quando eu preciso fazer duas buscas, para organizar algo. exe: buscar o menor valor da lista e alterar a posição dele com o atual... porque eu percorro a lista duas vezes, uma vez para achar o menor valor e a outra para ir alterando os valores.
+
 //algoritmo quadratico, é sempre quando eu preciso fazer duas buscas e lembrar que eu tenho as minhas condicionais dentro de cada elemento que percorre a minha lista,,, ou seja, tudo em dobro. Varias ações que o meu algoritmo precisa fazer.
 
 //algoritmo de crescimento cubico... eu colocaria mais um for, para percorrer os elementos. ao inves de 2 for, teria 3.
