@@ -1,6 +1,7 @@
 //busca binaria, ela sempre fica seprando a lista em duas partes, e procura em uma delas.
 //esse algoritmo é bem mais performatico, porque ao inves do for, que tem que passar por todos os elementos do meu array, esse algoritmo sempre fica pegando a metade
-const listaLivros = require('./array')
+// const listaLivros = require('./array')
+import listaLivros from ("./array") //o identificador que utiliza junto com o import ele age como se fosse uma variavel.
 
 
 function busca (array, de, ate, buscador) {
