@@ -11,4 +11,5 @@ function pegarArquivo (caminhoArquivo) {
     fs.readFile(caminhoArquivo, encoding, (_ ,texto) =>  {
         console.log(texto)})
 }
-pegarArquivo('./arquivos/texto.md')
+
+pegarArquivo('/Users/tiago/Desktop/alura/JS/primeiraBiblioteca/arquivos/texto.md')
