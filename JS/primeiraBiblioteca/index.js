@@ -6,10 +6,18 @@ import chalk from 'chalk';
 
 //Um arquivo .js é entendido como um módulo independente e para trabalhar com esses módulos com o Node.js usamos as palavras-chave export e import.
 
+function tratarErro (erro) {
+    throw new Error(erro) 
+}
+//o throw: faz com que eu lance no terminal, a instancia do objeto Error , com o parametro que eu recebi da minha função pegaArquivo.
+
 function pegarArquivo (caminhoArquivo) {
     const encoding = 'utf-8'
-    fs.readFile(caminhoArquivo, encoding, (_ ,texto) =>  {
+    fs.readFile(caminhoArquivo, encoding, (erro ,texto) =>  {
+        if (erro) {
+            tratarErro(erro)
+        }
         console.log(texto)})
 }
 
-pegarArquivo('/Users/tiago/Desktop/alura/JS/primeiraBiblioteca/arquivos/texto.md')
+pegarArquivo('JS/primeiraBiblioteca/arquivos/texto.md')
