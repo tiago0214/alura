@@ -15,11 +15,29 @@ function tratarErro (erro) {
 
 function pegarArquivo (caminhoArquivo) {
     const encoding = 'utf-8'
-    fs.readFile(caminhoArquivo, encoding, (erro ,texto) =>  {
-        if (erro) {
-            tratarErro(erro)
-        }
-        console.log(texto)})
+
+    fs.promises.readFile(caminhoArquivo, encoding) //eu consigo usar o promisse aqui. Porque a biblioteca FS, esta preparada para trabalhar com código assincrono.
+        //o JS nada faz, depois que ele lê o arquivo.
+        //reparar que na minha outra função, o terceiro parametro. executava direto oque eu queria.
+        //aqui é o retorno do valor de readFile. (Espero que seja um texto.)
+        .then((texto) => console.log(texto))//precisa do then, para ele executar oque eu quero.
+        //o then é que é assincrono. porque o JS já leu o arquivo.
+        //eu não consigo pegar o valor de readFile de forma sincrona. Preciso utilizar um metodo do JS para resolver o valor dessa promessa.(then)
+        .catch(tratarErro) //posso chamar a função direto de tratarErro. De baixo dos panos, ele passo o parametro. 
+        //porque como o catch, recebe como parametro, uma função callback: que é a tratar Erro.
+        //then e catch: são funções.
+        //entender melhor, se a função callback, é a função que recebe ou é a função que é passada como parametro.
+
+        //then readFile catch : São funções encadeadas.
 }
 
-pegarArquivo('/primeiraBiblioteca/arquivos/texto.md')
+// function pegarArquivo (caminhoArquivo) {
+//     const encoding = 'utf-8'
+//     fs.readFile(caminhoArquivo, encoding, (erro ,texto) =>  {
+//         if (erro) {
+//             tratarErro(erro)
+//         }
+//         console.log(chalk.green(texto))})
+// }
+
+pegarArquivo('JS/primeiraBiblioteca/arquivos/texto.md')
