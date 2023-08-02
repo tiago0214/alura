@@ -1,0 +1,1 @@
+//expressoes regulares: utilizam caracteres especiais [] são chamados de metacharset. Para que eu consiga montar as classes. Ou seja, uma hipoteses de criar algumas funcionalidades. como buscar todos os elementos que estão dentro do [abc] de forma separada.
