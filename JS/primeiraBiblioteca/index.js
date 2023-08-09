@@ -13,22 +13,18 @@ function tratarErro (erro) {
 //o throw: faz com que eu lance no terminal, a instancia do objeto Error , com o parametro que eu recebi da minha função pegaArquivo.
 //todo objeto de erro , tem uma propriedade .code nele. Para achar o código do erro.
 
-const textoTeste = 'São geralmente recuperados a partir de um objeto [FileList](https://developer.mozilla.org/pt-BR/docs/Web/API/FileList) que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento [<input>](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input), a partir do objeto [DataTransfer](https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer) utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um [HTMLCanvasElement](https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement). Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes) para mais informações.).'
-
 function extrairLinks (texto) {
     const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm // g= global (pega o arquivo inteiro) m= multilinha
-    //const extrair = texto.match(regex)//se eu utilizar esse metodo de string. Ele vai me retornar o elemento completo em cada indice do meu array.
-    const extrair = regex.exec(texto)// isso é um metodo do próprio regex [exec()]
-    console.log(extrair)
+    const extrair = [...texto.matchAll(regex)]// posso utilizar o spread operator[...] para espalhar dentro do array
+    const resultado = extrair.map((captura) => ({[captura[1]] : captura [2]})) //aula 3 capturando links. video 06. explicação, o porque do () e também da criação da chave do objeto
+    console.log(resultado)
 }
-
-extrairLinks(textoTeste)
 
 async function pegarArquivo (caminho) {
     try{
         const encoding = 'utf-8'
         const texto = await fs.promises.readFile(caminho,encoding)
-        console.log(chalk.green(texto))
+        extrairLinks(texto)
     }
     catch(erro){
         tratarErro(erro)
@@ -37,7 +33,7 @@ async function pegarArquivo (caminho) {
         console.log(chalk.yellow('operação concluída'));
     }
 }
-
+pegarArquivo('JS/primeiraBiblioteca/arquivos/texto.md')
 
 // function pegarArquivo (caminhoArquivo) {
 //     const encoding = 'utf-8'
@@ -64,5 +60,3 @@ async function pegarArquivo (caminho) {
 //         }
 //         console.log(chalk.green(texto))})
 // }
-
-//pegarArquivo('JS/primeiraBiblioteca/arquivos/texto.md')
