@@ -17,7 +17,7 @@ function extrairLinks (texto) {
     const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm // g= global (pega o arquivo inteiro) m= multilinha
     const extrair = [...texto.matchAll(regex)]// posso utilizar o spread operator[...] para espalhar dentro do array
     const resultado = extrair.map((captura) => ({[captura[1]] : captura [2]})) //aula 3 capturando links. video 06. explicação, o porque do () e também da criação da chave do objeto
-    console.log(resultado)
+    return resultado
 }
 
 async function pegarArquivo (caminho) {
