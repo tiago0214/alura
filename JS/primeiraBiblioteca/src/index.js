@@ -25,6 +25,7 @@ async function pegarArquivo (caminho) {
         const encoding = 'utf-8'
         const texto = await fs.promises.readFile(caminho,encoding)
         extrairLinks(texto)
+        console.log(extrairLinks(texto))
     }
     catch(erro){
         tratarErro(erro)
@@ -33,7 +34,7 @@ async function pegarArquivo (caminho) {
         console.log(chalk.yellow('operação concluída'));
     }
 }
-pegarArquivo('JS/primeiraBiblioteca/arquivos/texto.md')
+export default pegarArquivo
 
 // function pegarArquivo (caminhoArquivo) {
 //     const encoding = 'utf-8'
