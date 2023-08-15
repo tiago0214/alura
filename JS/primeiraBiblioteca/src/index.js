@@ -17,21 +17,17 @@ function extrairLinks (texto) {
     const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm // g= global (pega o arquivo inteiro) m= multilinha
     const extrair = [...texto.matchAll(regex)]// posso utilizar o spread operator[...] para espalhar dentro do array
     const resultado = extrair.map((captura) => ({[captura[1]] : captura [2]})) //aula 3 capturando links. video 06. explicação, o porque do () e também da criação da chave do objeto
-    return resultado
+    return resultado.length !== 0 ? resultado : 'Não há link no arquivo' 
 }
 
 async function pegarArquivo (caminho) {
     try{
         const encoding = 'utf-8'
         const texto = await fs.promises.readFile(caminho,encoding)
-        extrairLinks(texto)
-        console.log(extrairLinks(texto))
+        return extrairLinks(texto)
     }
     catch(erro){
         tratarErro(erro)
-    }
-    finally{
-        console.log(chalk.yellow('operação concluída'));
     }
 }
 export default pegarArquivo
