@@ -1,8 +1,7 @@
 ﻿Console.Clear();
 
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
-bandasRegistradas.Add("bandinha 1", new List<int> { 10, 2, 5 });
-bandasRegistradas.Add("bandinha 2", new List<int>());
+
 
 void ExibirMenu()
 {
