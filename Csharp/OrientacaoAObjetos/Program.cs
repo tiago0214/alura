@@ -1,5 +1,51 @@
 ﻿//criação de um FOREACH com funções lambda
+Episodio ep1 = new Episodio("Hora certa", 60, 2);
+ep1.AdicionarConvidado("Matheus cebolinha");
+ep1.AdicionarConvidado("Junior Cascão");
 
+Episodio ep2 = new Episodio("Hora do volei", 90, 1);
+ep2.AdicionarConvidado("Pedro Enterrada");
+ep2.AdicionarConvidado("Lucas Cortavento");
+
+Podcast podBola = new Podcast("Pode bolinha", 7768);
+podBola.AdicionarEpisodios(ep1);
+podBola.AdicionarEpisodios(ep2);
+
+podBola.ExibirDetalhes();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Console.WriteLine("====================================================================");
 List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 List<int> numerosPares = numeros.FindAll((numero) => numero % 2 == 0);
 //numerosPares.ForEach((numero) => Console.WriteLine(numero));
