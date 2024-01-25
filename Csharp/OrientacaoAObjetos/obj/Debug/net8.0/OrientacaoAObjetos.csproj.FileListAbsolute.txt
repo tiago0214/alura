@@ -1,0 +1,15 @@
+C:\dev\alura\Csharp\OrientacaoAObjetos\bin\Debug\net8.0\OrientacaoAObjetos.exe
+C:\dev\alura\Csharp\OrientacaoAObjetos\bin\Debug\net8.0\OrientacaoAObjetos.deps.json
+C:\dev\alura\Csharp\OrientacaoAObjetos\bin\Debug\net8.0\OrientacaoAObjetos.runtimeconfig.json
+C:\dev\alura\Csharp\OrientacaoAObjetos\bin\Debug\net8.0\OrientacaoAObjetos.dll
+C:\dev\alura\Csharp\OrientacaoAObjetos\bin\Debug\net8.0\OrientacaoAObjetos.pdb
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.AssemblyInfoInputs.cache
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.AssemblyInfo.cs
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.csproj.CoreCompileInputs.cache
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.sourcelink.json
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.dll
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\refint\OrientacaoAObjetos.dll
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.pdb
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\OrientacaoAObjetos.genruntimeconfig.cache
+C:\dev\alura\Csharp\OrientacaoAObjetos\obj\Debug\net8.0\ref\OrientacaoAObjetos.dll
