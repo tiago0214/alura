@@ -1,5 +1,6 @@
 ﻿using ScreenSound.Menus;
 using ScreenSound.Modelos;
+
 Banda ira = new Banda("Ira");
 ira.AdicionarNota(new Avaliacao(10));
 ira.AdicionarNota(new Avaliacao(8));
@@ -19,6 +20,10 @@ opcoes.Add(4, new MenuAvaliarBanda());
 opcoes.Add(5, new MenuExibirDetalhes());
 opcoes.Add(-1, new MenuSair());
 
+
+Dictionary<string, int> valor = new();
+valor.Add("Valor 1", 1);
+int meu = valor["Valor 1"];
 
     void ExibirLogo()
 {
@@ -52,45 +57,14 @@ void ExibirOpcoesDoMenu()
     {
         Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
         menuASerExibido.Executar(bandasRegistradas);
-    }else
-    {
-
+        if(opcaoEscolhidaNumerica > 0)
+        {
+            ExibirOpcoesDoMenu();
+        }
     }
-
-    switch (opcaoEscolhidaNumerica)
+    else
     {
-        case 1:
-            MenuRegistrarBanda menu1 = new MenuRegistrarBanda();
-            menu1.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 2:
-            MenuRegistrarAlbum menu2 = new MenuRegistrarAlbum();
-            menu2.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 3:
-            MenuBandasRegistradas menu3 = new MenuBandasRegistradas();
-            menu3.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 4:
-            MenuAvaliarBanda menu4 = new MenuAvaliarBanda();
-            menu4.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 5:
-            MenuExibirDetalhes menu5 = new MenuExibirDetalhes();
-            menu5.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case -1:
-            MenuSair menuSair = new MenuSair();
-            menuSair.Executar(bandasRegistradas);
-            break;
-        default:
-            Console.WriteLine("Opção inválida");
-            break;
+        Console.WriteLine("Opção inválida");
     }
 }
 ExibirOpcoesDoMenu();
