@@ -16,11 +16,11 @@ internal class MenuRegistrarBanda : Menu
         bandasRegistradas.Add(nomeDaBanda, banda);
         Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
 
-        OpenAIAPI client = new OpenAIAPI("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");
-        Conversation chat = client.Chat.CreateConversation();
-        chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em um parágrafo. Adote um estilo informal.");
-        string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
-        banda.Resumo = resposta;
+        // OpenAIAPI client = new OpenAIAPI("KEY");
+        // Conversation chat = client.Chat.CreateConversation();
+        // chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em um parágrafo. Adote um estilo informal.");
+        // string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+        // banda.Resumo = resposta;
 
         Console.WriteLine("\nDigite uma tecla para votar ao menu principal");
         Console.ReadKey();
