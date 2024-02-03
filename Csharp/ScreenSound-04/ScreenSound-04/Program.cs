@@ -1,12 +1,19 @@
-﻿
+﻿using ScreenSound_04.Modelos;
 using System.Text.Json;
 
-using (HttpClient client = new HttpClient())
+try
 {
-    string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
+    using (HttpClient client = new HttpClient())
+    {
+        string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
 
-    //vou criar uma lista baseada no objeto ai de cima em JSON.
-    //reparar que eu não estou instanciando o TIPO . JsonSerializer.
-    var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta);
+        //vou criar uma lista baseada no objeto ai de cima em JSON.
+        //reparar que eu não estou instanciando o TIPO . JsonSerializer.Estou utlizando direto. porque é um tipo estático
+        var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
+        musicas[1998].ExibirDetalhesDaMusica();
+    }
 }
-
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
