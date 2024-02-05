@@ -10,7 +10,8 @@ try
         //vou criar uma lista baseada no objeto ai de cima em JSON.
         //reparar que eu não estou instanciando o TIPO . JsonSerializer.Estou utlizando direto. porque é um tipo estático
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
-        musicas[1998].ExibirDetalhesDaMusica();
+
+        Console.WriteLine(musicas[1998].Artista);
     }
 }
 catch (Exception ex)
