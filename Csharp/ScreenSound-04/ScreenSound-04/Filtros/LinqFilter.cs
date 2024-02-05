@@ -2,7 +2,7 @@ using System.Linq;
 using ScreenSound_04.Modelos;
 
 namespace ScreenSound_04.Filtros;
-internal class LingFilter
+internal class LinqFilter
 {
     public static void FiltrarTodosOsGenerosMusicas(List<Musica> musicas)
     {

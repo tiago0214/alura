@@ -1,4 +1,5 @@
-﻿using ScreenSound_04.Modelos;
+﻿using ScreenSound_04.Filtros;
+using ScreenSound_04.Modelos;
 using System.Text.Json;
 
 try
@@ -9,9 +10,10 @@ try
 
         //vou criar uma lista baseada no objeto ai de cima em JSON.
         //reparar que eu não estou instanciando o TIPO . JsonSerializer.Estou utlizando direto. porque é um tipo estático
-        var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
+        List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
-        Console.WriteLine(musicas[1998].Artista);
+        //LinqFilter.FiltrarTodosOsGenerosMusicas(musicas);
+        LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
     }
 }
 catch (Exception ex)
