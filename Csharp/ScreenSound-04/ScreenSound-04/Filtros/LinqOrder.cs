@@ -19,7 +19,7 @@ internal class LinqOrder
 
         foreach (var artista in artistasPorGeneroMusical)
         {
-            Console.WriteLine(artista);
+            Console.WriteLine($"-  {artista}");
         }
     }
 }

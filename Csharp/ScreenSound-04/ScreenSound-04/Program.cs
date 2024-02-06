@@ -12,12 +12,16 @@ try
         //reparar que eu não estou instanciando o TIPO . JsonSerializer.Estou utlizando direto. porque é um tipo estático
         List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
+
+
         //LinqFilter.FiltrarTodosOsGenerosMusicas(musicas);
         //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
-        LinqOrder.ExibirArtistasPorGeneroMusical(musicas,"pop");
+        //LinqOrder.ExibirArtistasPorGeneroMusical(musicas,"pop");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "U2");
+        LinqFilter.FiltrarMusicasPorAno(musicas, 2019);
     }
 }
 catch (Exception ex)
 {
-    Console.WriteLine(ex.Message);
+    Console.WriteLine("Problema: " +ex.Message);
 }
