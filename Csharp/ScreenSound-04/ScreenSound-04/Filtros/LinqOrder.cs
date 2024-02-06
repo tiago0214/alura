@@ -13,4 +13,13 @@ internal class LinqOrder
             Console.WriteLine(item);
         }
     }
+    public static void ExibirArtistasPorGeneroMusical(List<Musica> musicas, string genero)
+    {
+        var artistasPorGeneroMusical = musicas.Where(musica => musica.Genero!.Contains(genero)).Select(musica => musica.Artista).Distinct().ToList();
+
+        foreach (var artista in artistasPorGeneroMusical)
+        {
+            Console.WriteLine(artista);
+        }
+    }
 }

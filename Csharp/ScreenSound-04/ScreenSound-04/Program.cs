@@ -13,7 +13,8 @@ try
         List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
         //LinqFilter.FiltrarTodosOsGenerosMusicas(musicas);
-        LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+        //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+        LinqOrder.ExibirArtistasPorGeneroMusical(musicas,"pop");
     }
 }
 catch (Exception ex)
