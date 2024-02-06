@@ -33,5 +33,6 @@ internal class Musica
         Console.WriteLine($"Música: {Nome}");
         Console.WriteLine($"Duração: {Duracao / 1000}");
         Console.WriteLine($"Gênero: {Genero}");
+        Console.WriteLine($"Ano: {Ano}");
     }
 }
