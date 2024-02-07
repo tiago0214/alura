@@ -9,7 +9,7 @@ internal class MusicasPreferidas
     }
     public string? Nome { get; set; }
 
-    public List<Musica>? ListaDeMusicasPreferidas { get;}
+    public List<Musica>? ListaDeMusicasPreferidas { get; }
 
     public void AdcionarMusicasFavoritas(Musica musica)
     {
@@ -19,10 +19,10 @@ internal class MusicasPreferidas
     public void ExibirMusicasFavoritas()
     {
         Console.WriteLine($"Musicas favoritas de {Nome}");
-        foreach(var musicas in ListaDeMusicasPreferidas)
+        foreach (var musicas in ListaDeMusicasPreferidas)
         {
             Console.WriteLine(musicas.Nome);
         }
-
+        Console.WriteLine();
     }
 }

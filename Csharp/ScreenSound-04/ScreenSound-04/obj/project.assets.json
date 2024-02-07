@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\tiago\\.nuget\\packages\\": {}
+    "/Users/tiago/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\alura\\Csharp\\ScreenSound-04\\ScreenSound-04\\ScreenSound-04.csproj",
+      "projectUniqueName": "/Users/tiago/Desktop/alura/Csharp/ScreenSound-04/ScreenSound-04/ScreenSound-04.csproj",
       "projectName": "ScreenSound-04",
-      "projectPath": "C:\\dev\\alura\\Csharp\\ScreenSound-04\\ScreenSound-04\\ScreenSound-04.csproj",
-      "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\alura\\Csharp\\ScreenSound-04\\ScreenSound-04\\obj\\",
+      "projectPath": "/Users/tiago/Desktop/alura/Csharp/ScreenSound-04/ScreenSound-04/ScreenSound-04.csproj",
+      "packagesPath": "/Users/tiago/.nuget/packages/",
+      "outputPath": "/Users/tiago/Desktop/alura/Csharp/ScreenSound-04/ScreenSound-04/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/tiago/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.415/RuntimeIdentifierGraph.json"
       }
     }
   }

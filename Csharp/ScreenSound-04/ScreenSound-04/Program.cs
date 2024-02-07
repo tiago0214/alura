@@ -2,9 +2,6 @@
 using ScreenSound_04.Modelos;
 using System.Text.Json;
 
-
-
-
 try
 {
     using (HttpClient client = new HttpClient())
@@ -14,7 +11,7 @@ try
         //vou criar uma lista baseada no objeto ai de cima em JSON.
         //reparar que eu não estou instanciando o TIPO . JsonSerializer.Estou utlizando direto. porque é um tipo estático
         List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
-        
+
 
 
 
@@ -26,10 +23,23 @@ try
 
         MusicasPreferidas musicasPreferidasDoDaniel = new MusicasPreferidas("Daniel");
         musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[0]);
+        musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[1]);
+        musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[2]);
+        musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[3]);
+        musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[4]);
+        musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
+
+        MusicasPreferidas musicasPreferidasDoGui = new MusicasPreferidas("Daniel");
+        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[6]);
+        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[7]);
+        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[8]);
+        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[9]);
+        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[10]);
+        musicasPreferidasDoGui.ExibirMusicasFavoritas();
 
     }
 }
 catch (Exception ex)
 {
-    Console.WriteLine("Problema: " +ex.Message);
+    Console.WriteLine("Problema: " + ex.Message);
 }
