@@ -27,15 +27,12 @@ try
         musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[2]);
         musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[3]);
         musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[4]);
-        musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
+        //musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
 
-        MusicasPreferidas musicasPreferidasDoGui = new MusicasPreferidas("Daniel");
-        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[6]);
-        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[7]);
-        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[8]);
-        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[9]);
-        musicasPreferidasDoGui.AdcionarMusicasFavoritas(musicas[10]);
-        musicasPreferidasDoGui.ExibirMusicasFavoritas();
+        //musicasPreferidasDoDaniel.GerarArquivoJson();
+        musicasPreferidasDoDaniel.GerarArquivoComMusicasFavoritasTxt();
+
+
 
     }
 }
