@@ -33,4 +33,18 @@ internal class LinqFilter
             Console.WriteLine(musica);
         }
     }
+
+    public static void OrdenarTodosOsComBaseNoPedido(List<Musica> musicas, string tonalidade)
+    {
+        var musicasOrdenadas = musicas
+            .Where(a => a.Tonalidades!.Equals(tonalidade))
+            .Select(a => a.Nome) //transformo em uma lista de string, como base na seleceção que eu escolher
+            .ToList();
+
+        foreach( var music in musicasOrdenadas)
+        {
+            Console.WriteLine(music);
+            
+        }
+    }
 }

@@ -8,11 +8,10 @@ try
     {
         string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
 
+
         //vou criar uma lista baseada no objeto ai de cima em JSON.
         //reparar que eu não estou instanciando o TIPO . JsonSerializer.Estou utlizando direto. porque é um tipo estático
         List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
-
-
 
 
         //LinqFilter.FiltrarTodosOsGenerosMusicas(musicas);
@@ -29,10 +28,10 @@ try
         musicasPreferidasDoDaniel.AdcionarMusicasFavoritas(musicas[4]);
         //musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
 
+
+        LinqFilter.OrdenarTodosOsComBaseNoPedido(musicas,"C#");
         //musicasPreferidasDoDaniel.GerarArquivoJson();
-        musicasPreferidasDoDaniel.GerarArquivoComMusicasFavoritasTxt();
-
-
+        //musicasPreferidasDoDaniel.GerarArquivoComMusicasFavoritasTxt();
 
     }
 }
