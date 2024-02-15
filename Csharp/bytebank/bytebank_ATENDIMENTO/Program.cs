@@ -48,10 +48,4 @@ void TestarArrayDeContasCorrentes()
 }
 TestarArrayDeContasCorrentes();
 
-ContaCorrente conta = new ContaCorrente(223);
-conta.Titular = new Cliente();
-conta.Titular.Cpf = "44554";
 
-
-Console.WriteLine("A partir daqui");
-Console.WriteLine(conta.Titular.Cpf);
