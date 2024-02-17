@@ -43,14 +43,21 @@ void TestarArrayDeContasCorrentes()
     contas.Adicionar(new ContaCorrente(874));
     contas.Adicionar(new ContaCorrente(874));
     contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(874));
     ContaCorrente contaJose = new ContaCorrente(123);
     //contaJose.Titular.Cpf = "123331234";
     contas.Adicionar(contaJose);
-    contas.ExibirContas();
+    //contas.ExibirContas();
 
     Console.WriteLine("==============");
-    contas.RemoverIndiceDoMeuArray(contaJose);
-    contas.ExibirContas();
+    for (int i = 0; i < contas.Tamanho; i++)
+    {
+        ContaCorrente conta = contas[i];
+        Console.WriteLine($"Indice[{i}] = Conta: {conta.Conta}\nConta: {conta.Nome_Agencia}");
+    }
+
 
 }
 TestarArrayDeContasCorrentes();
