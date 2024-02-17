@@ -1,6 +1,8 @@
-﻿using bytebank.Modelos.Conta;
+﻿using System.ComponentModel;
+using bytebank.Modelos.Conta;
 using bytebank_ATENDIMENTO.bytebank.Util;
 
+Console.Clear();
 Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 //nova forma de declarar Array.
 
@@ -34,16 +36,23 @@ void TestarMediana(Array array)
 
 void TestarArrayDeContasCorrentes()
 {
-    ContaCorrente[] contas = new ContaCorrente[]
-    {
-        new ContaCorrente(874),
-        new ContaCorrente(874),
-        new ContaCorrente(874),
-    };
+    ListaDeContasCorrentes contas = new ListaDeContasCorrentes();
+    contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(133));
+    contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(874));
+    contas.Adicionar(new ContaCorrente(874));
+    ContaCorrente contaJose = new ContaCorrente(123);
+    //contaJose.Titular.Cpf = "123331234";
+    contas.Adicionar(contaJose);
+    contas.ExibirContas();
 
-    foreach (ContaCorrente conta in contas)
-    {
-        Console.WriteLine(conta.Conta);
-    }
+    Console.WriteLine("==============");
+    contas.RemoverIndiceDoMeuArray(contaJose);
+    contas.ExibirContas();
+
 }
 TestarArrayDeContasCorrentes();
+
+

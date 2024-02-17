@@ -100,7 +100,7 @@
 		{
 			Numero_agencia = numero_agencia;
 			Conta = Guid.NewGuid().ToString().Substring(0, 8);
-			//Titular = new Cliente();
+			Titular = new Cliente();
 			TotalDeContasCriadas++;
 		}
 
@@ -111,7 +111,7 @@
 				   $"Número da Conta : {this.Conta} \n" +
 				   $"Titular da Conta: {this.Titular.Nome} \n" +
 				   $"CPF do Titular  : {this.Titular.Cpf} \n" +
-				   $"Profissão do Titular: { this.Titular.Profissao}";
+				   $"Profissão do Titular: {this.Titular.Profissao}";
 		}
 	}
 
