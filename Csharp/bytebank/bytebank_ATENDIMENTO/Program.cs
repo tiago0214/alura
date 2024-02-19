@@ -67,7 +67,12 @@ void TestarArrayDeContasCorrentes()
 
 
 
-ArrayList _listaDeContas = new ArrayList();
+List<ContaCorrente> _listaDeContas = new List<ContaCorrente>
+{
+    new ContaCorrente(95){Saldo = 100},
+    new ContaCorrente(95){Saldo = 200},
+    new ContaCorrente(95){Saldo = 95},
+};
 
 
 AtendimentoCliente();
