@@ -75,7 +75,7 @@ List<ContaCorrente> _listaDeContas = new List<ContaCorrente>
 };
 
 
-AtendimentoCliente();
+//AtendimentoCliente();
 void AtendimentoCliente()
 {
     char opcao = '0';
